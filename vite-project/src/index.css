@@ -1,0 +1,352 @@
+/* styles.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Minimal Fiori Variables */
+:root {
+  --fiori-blue: #0a6ed1;
+  --fiori-blue-dark: #0854a0;
+  --fiori-white: #ffffff;
+  --fiori-gray-light: #f5f6f7;
+  --fiori-text: #32363a;
+  --fiori-text-light: #6a6d70;
+  --fiori-error: #bb0000;
+}
+
+/* Minimal Container */
+.fiori-minimal-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--fiori-gray-light);
+  font-family: "72", "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Minimal Header */
+.fiori-minimal-header {
+  padding: 1rem;
+  text-align: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  background: var(--fiori-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.fiori-minimal-back {
+  position: absolute;
+  left: 1rem;
+  background: none;
+  border: none;
+  padding: 0.25rem;
+  cursor: pointer;
+  color: var(--fiori-blue);
+  display: flex;
+  align-items: center;
+}
+
+.fiori-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.fiori-minimal-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--fiori-text);
+}
+
+/* Minimal Content */
+.fiori-minimal-content {
+  flex: 1;
+  padding: 1.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+
+}
+.fiori-minimal-content-2 {
+  flex: 1;
+  padding: 1.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* center vertical */
+
+}
+
+/* Minimal Buttons */
+.fiori-minimal-button {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.25rem;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+  text-align: center;
+  width: 100%;
+
+}
+
+.fiori-minimal-button--primary {
+  background: var(--fiori-blue);
+  color: var(--fiori-white);
+  margin-top: 10px;
+  
+  
+}
+
+.fiori-minimal-button--primary:hover {
+  background: var(--fiori-blue-dark);
+}
+
+.fiori-minimal-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Minimal Footer */
+.fiori-minimal-footer {
+  padding: 1rem;
+  text-align: center;
+  font-size: 0.75rem;
+  color: var(--fiori-text-light);
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  background: var(--fiori-white);
+}
+
+/* Tabs */
+.fiori-minimal-tabs {
+  display: flex;
+  background-color: var(--fiori-white);
+  border-radius: 0.25rem;
+  padding: 0.25rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.fiori-minimal-tab {
+  flex: 1;
+  padding: 0.75rem;
+  text-align: center;
+  border: none;
+  background: none;
+  color: var(--fiori-text-light);
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 0.25rem;
+  transition: all 0.2s;
+}
+
+.fiori-minimal-tab--active {
+  background-color: var(--fiori-blue);
+  color: var(--fiori-white);
+}
+
+/* Image Container */
+.fiori-minimal-image-container {
+  width: 100%;
+  height: 16rem;
+  background-color: #e0e0e0;
+  border-radius: 0.25rem;
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fiori-minimal-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Button Container */
+.fiori-minimal-button-container {
+  margin-bottom: 1.5rem;
+}
+
+/* Loading Spinner */
+.fiori-minimal-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fiori-minimal-spinner {
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-right: 0.5rem;
+  animation: fiori-spin 1s linear infinite;
+}
+
+.fiori-minimal-spinner-track {
+  opacity: 0.25;
+  stroke: currentColor;
+  stroke-width: 4;
+}
+
+.fiori-minimal-spinner-path {
+  opacity: 0.75;
+  fill: currentColor;
+}
+
+@keyframes fiori-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Error Message */
+.fiori-minimal-error-message {
+  color: var(--fiori-error);
+  text-align: center;
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+}
+
+/* Data Container */
+.fiori-minimal-data-container {
+  background-color: var(--fiori-white);
+  border-radius: 0.25rem;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.fiori-minimal-data-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--fiori-text);
+}
+
+.fiori-minimal-invoice-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  font-size: 0.875rem;
+}
+
+.fiori-minimal-detail-label {
+  font-weight: 600;
+  color: var(--fiori-text);
+}
+
+/* Table */
+.fiori-minimal-table-container {
+  overflow-x: auto;
+}
+
+.fiori-minimal-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+
+.fiori-minimal-table-header {
+  background-color: var(--fiori-blue);
+  color: var(--fiori-white);
+  padding: 0.75rem;
+  text-align: left;
+  font-weight: 600;
+}
+
+.fiori-minimal-table-row {
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.fiori-minimal-table-row:hover {
+  background-color: rgba(10, 110, 209, 0.05);
+}
+
+.fiori-minimal-table-cell {
+  padding: 0.75rem;
+  text-align: left;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .fiori-minimal-header,
+  .fiori-minimal-footer {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+  .fiori-minimal-content {
+    padding: 1rem 0.75rem;
+  }
+}
+
+/* Loading Container */
+.fiori-minimal-loading-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+}
+
+/* Info Card */
+.fiori-minimal-info-card {
+  background-color: var(--fiori-white);
+  border-radius: 0.25rem;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.fiori-minimal-info-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: var(--fiori-text);
+}
+
+.fiori-minimal-info-title span {
+  font-weight: normal;
+}
+
+.fiori-minimal-info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+}
+
+/* Input Styles */
+.fiori-minimal-input {
+  width: 80px;
+  padding: 0.5rem;
+  text-align: center;
+  border-radius: 0.25rem;
+  border: 1px solid var(--fiori-blue);
+  background-color: var(--fiori-white);
+  transition: all 0.2s;
+}
+
+.fiori-minimal-input:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(10, 110, 209, 0.2);
+}
+
+.fiori-minimal-input-success {
+  border-color: #10b981;
+  background-color: rgba(16, 185, 129, 0.1);
+}
+
+.fiori-minimal-input-error {
+  border-color: var(--fiori-error);
+  background-color: rgba(187, 0, 0, 0.1);
+}
+
+/* Table Adjustments */
+.fiori-minimal-table th, 
+.fiori-minimal-table td {
+  padding: 0.75rem 1rem;
+}
+
+.fiori-minimal-table-header {
+  white-space: nowrap;
+}
+
